@@ -1,7 +1,7 @@
 const express = require("express");
 const { Worker } = require("../worker");
 const { InMemoryKVStore } = require("../in-memory-kv-store");
-const { Headers } = require("@titelmedia/node-fetch");
+const { Headers } = require("node-fetch-web-streams");
 
 describe("Workers", () => {
   test("It Can Create and Execute a Listener", () => {
@@ -108,7 +108,7 @@ describe("Workers", () => {
       const worker = new Worker("foo.com", 'addEventListener("fetch", (e) => e.respondWith(Response.redirect("http://bar.com", 302)))');
       const response = await worker.executeFetchEvent("http://foo.com");
       expect(response.status).toBe(302);
-      expect(response.headers.get("Location")).toBe("http://bar.com");
+      expect(response.headers.get("Location")).toBe(new URL("http://bar.com").toString());
     });
 
     test("It can return a stream response", async () => {

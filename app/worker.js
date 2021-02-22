@@ -1,8 +1,7 @@
 const { createContext, Script } = require("vm");
-// The titelmedia node-fetch fork uses Web Streams instead of NodeJS ones
-const { Request, Response, Headers } = require("@titelmedia/node-fetch");
-const { URL } = require("url");
-const fetch = require("@titelmedia/node-fetch");
+// "node-fetch-web-streams" uses Web Streams instead of NodeJS ones
+const fetch = require("node-fetch-web-streams");
+const { Request, Response, Headers } = fetch
 const atob = require("atob");
 const btoa = require("btoa");
 const crypto = new (require("node-webcrypto-ossl"))();
