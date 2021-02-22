@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/jccr/cloudflare-worker-local/compare/v1.13.0...v1.14.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* **server:** include multiple values for same header in response ([2c9f834](https://github.com/jccr/cloudflare-worker-local/commit/2c9f834))
+
+
+### Features
+
+* use node-fetch-web-streams ([7163139](https://github.com/jccr/cloudflare-worker-local/commit/7163139))
+* **KVNamespace:** add web streams support ([7b7f66c](https://github.com/jccr/cloudflare-worker-local/commit/7b7f66c))
+* **worker:** add web streams support ([a59fb10](https://github.com/jccr/cloudflare-worker-local/commit/a59fb10)), closes [#39](https://github.com/jccr/cloudflare-worker-local/issues/39)
+
+
+
 <a name="1.13.0"></a>
 # [1.13.0](https://github.com/gja/cloudflare-worker-local/compare/v1.12.1...v1.13.0) (2020-12-15)
 
