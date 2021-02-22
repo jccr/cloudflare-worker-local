@@ -1,23 +1,22 @@
 {
-  "name": "cloudflare-worker-local",
+  "name": "@jccr/cloudflare-worker-local",
   "version": "1.13.0",
   "description": "Run a Cloudflare-compatible Worker Locally",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm install && git diff --quiet && npm test && npx standard-version && git push --follow-tags origin",
-    "test": "jest",
-    "test-ci": "jest --ci --reporters=jest-junit --reporters=default --coverage --coverageReporters=cobertura --coverageReporters=html"
+    "test": "jest --collect-coverage",
+    "release": "npm install && git diff --quiet && npm test && npx standard-version && git push --follow-tags origin"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gja/cloudflare-worker-local.git"
+    "url": "git+https://github.com/jccr/cloudflare-worker-local.git"
   },
   "author": "Tejas Dinkar <tejas@gja.in>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gja/cloudflare-worker-local/issues"
+    "url": "https://github.com/jccr/cloudflare-worker-local/issues"
   },
-  "homepage": "https://github.com/gja/cloudflare-worker-local#readme",
+  "homepage": "https://github.com/jccr/cloudflare-worker-local#readme",
   "dependencies": {
     "@iarna/toml": "^2.2.3",
     "atob": "^2.1.2",
