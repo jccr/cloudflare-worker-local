@@ -52,5 +52,8 @@
       "/node_modules/",
       "/examples"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
